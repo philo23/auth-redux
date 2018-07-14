@@ -1,0 +1,38 @@
+{
+  "name": "wbc/auth-redux",
+  "description": "A drop in modern replacement for most existing PEAR Auth configurations.",
+  "readme": "README.md",
+  "license": "MIT",
+  "keywords": [
+    "pear",
+    "auth",
+    "replacement"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Philip Pryce",
+      "email": "philip.pryce@me.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "WBC\\Auth\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WBC\\Tests\\Auth\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "find ./src -type f -name \"*.php\" -print0 | parallel --halt 'soon,fail=10%' -j5 -q0 php -l 1> /dev/null"
+  },
+  "require": {
+    "php": "^5.3.3 || ^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.1",
+    "phan/phan": "^0.12.9"
+  }
+}
