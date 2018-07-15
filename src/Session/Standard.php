@@ -15,7 +15,9 @@ class Standard implements SessionInterface
     {
         $this->namespace = $namespace;
 
-        session_start();
+        if (session_id() == '') {
+            session_start();
+        }
 
         if (!isset($_SESSION[$this->namespace])) {
             $_SESSION[$this->namespace] = [];
