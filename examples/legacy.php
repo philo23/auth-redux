@@ -12,7 +12,7 @@ $_POST['password'] = $password;
 $auth = new WBC\Auth\Redux(
     new WBC\Auth\Storage\PDO($db),
     new WBC\Auth\Hashing\Standard(),
-    new WBC\Auth\Session\Standard()
+    new WBC\Auth\Session\PEARAuthBackwardsCompatible()
 );
 
 function loginForm ($username, $reason) {

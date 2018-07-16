@@ -6,7 +6,7 @@ use WBC\Auth\UserContainer;
 class Standard implements SessionInterface
 {
     /** @var string */
-    private $namespace;
+    protected $namespace;
 
     /**
      * @param string $namespace
